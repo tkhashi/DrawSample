@@ -22,7 +22,7 @@
                    VerticalAlignment="Top"
                    Width="200"/>
 
-        <Canvas Name="Canvas1" 
+        <Canvas Name="Canvas1"
                 Background="#01010101" 
                 Margin="0,37,0,0" >
                 <i:Interaction.Behaviors>

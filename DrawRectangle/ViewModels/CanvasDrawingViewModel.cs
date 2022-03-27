@@ -1,23 +1,23 @@
-﻿using System.Windows;
-using System.Windows.Input;
-using Reactive.Bindings;
+﻿using Reactive.Bindings;
+using System.Windows;
 
 namespace DrawRectangle.ViewModels
 {
     public class CanvasDrawingViewModel
     {
-        public ReactivePropertySlim<string> Text { get; } = new ReactivePropertySlim<string>("クリックされていないな…");
+        public ReactivePropertySlim<string> Text { get; } = new ReactivePropertySlim<string>("クリックされていないな...");
 
-        public ReactiveCommand ClickLeftCommand { get; } = new ReactiveCommand();
+        public ReactiveCommand<Point> ClickLeftCommand { get; } = new ReactiveCommand<Point>();
 
         public CanvasDrawingViewModel()
         {
-            ClickLeftCommand.WithSubscribe(() => OnClickLeft());
+            ClickLeftCommand.WithSubscribe(p => OnClickLeft(p));
         }
 
-        public void OnClickLeft()
+        private void OnClickLeft(Point p)
         {
-            Text.Value = "左クリックされたよ！";
+
+            Text.Value = $"左クリックされたよ！ X: {p.X} Y: {p.Y}";
         }
     }
 }
