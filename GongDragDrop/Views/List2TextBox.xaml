@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="GongDragDrop.Views.List2TextBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:dd="urn:gong-wpf-dragdrop"
+             xmlns:local="clr-namespace:GongDragDrop.Views" 
+             xmlns:vm="clr-namespace:GongDragDrop.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+     <UserControl.DataContext>
+        <vm:List2TextBoxViewModel/>
+     </UserControl.DataContext>
+
+    <Grid>
+        <Grid Grid.Row="2" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <!-- データ元-->
+            <TextBlock Grid.Row="0"
+                       Text="アプリ内でのDragDrop gong-wpf-dragdrop使用"
+                       VerticalAlignment="Bottom"
+                       TextDecorations="Underline"/>
+            <TextBlock Grid.Row="1"
+                       Text="Source ListBox"
+                       Margin="20,0,0,0"
+                       VerticalAlignment="Bottom"/>
+            <ListBox Grid.Row="2"
+                     Margin="20,0"
+                     BorderThickness="1"
+                     ItemsSource="{Binding SampleLists}"
+                     DisplayMemberPath="SampleText"
+                     BorderBrush="DimGray"
+                     dd:DragDrop.IsDragSource="True"
+                     dd:DragDrop.UseDefaultDragAdorner="True"/>
+
+             <!-- データを移す先 -->
+            <TextBlock Grid.Row="1"
+                       Text="Target TextBox"
+                       Margin="20,0,0,0"
+                       VerticalAlignment="Bottom"/>
+            <TextBox Grid.Row="2"
+                     VerticalAlignment="Top"
+                     Margin="20,0"
+                     Text="{Binding DropdText.Value}"
+                     IsReadOnly="True"
+                     dd:DragDrop.IsDropTarget="True"
+                     dd:DragDrop.DropHandler="{Binding SampleLists.List2TextBoxViewModel}"/>
+        </Grid>
+    </Grid>
+</UserControl>

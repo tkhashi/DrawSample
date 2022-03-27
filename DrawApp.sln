@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrawApp", "DrawApp\DrawApp.csproj", "{31F48A45-F344-48CD-9AF1-C9F54CCFDBBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GongDragDrop", "GongDragDrop\GongDragDrop.csproj", "{C007B637-9134-4E1F-98EA-5AE6BF0FB8CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31F48A45-F344-48CD-9AF1-C9F54CCFDBBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31F48A45-F344-48CD-9AF1-C9F54CCFDBBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31F48A45-F344-48CD-9AF1-C9F54CCFDBBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31F48A45-F344-48CD-9AF1-C9F54CCFDBBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C007B637-9134-4E1F-98EA-5AE6BF0FB8CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C007B637-9134-4E1F-98EA-5AE6BF0FB8CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C007B637-9134-4E1F-98EA-5AE6BF0FB8CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C007B637-9134-4E1F-98EA-5AE6BF0FB8CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B75AA38D-2805-4095-913B-3B311869D20C}
+	EndGlobalSection
+EndGlobal
