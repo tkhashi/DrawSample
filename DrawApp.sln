@@ -5,7 +5,9 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrawApp", "DrawApp\DrawApp.csproj", "{31F48A45-F344-48CD-9AF1-C9F54CCFDBBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GongDragDrop", "GongDragDrop\GongDragDrop.csproj", "{C007B637-9134-4E1F-98EA-5AE6BF0FB8CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GongDragDrop", "GongDragDrop\GongDragDrop.csproj", "{C007B637-9134-4E1F-98EA-5AE6BF0FB8CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawRectangle", "DrawRectangle\DrawRectangle.csproj", "{7137A71D-45D5-49A2-923E-A60C026AD02D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{C007B637-9134-4E1F-98EA-5AE6BF0FB8CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C007B637-9134-4E1F-98EA-5AE6BF0FB8CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C007B637-9134-4E1F-98EA-5AE6BF0FB8CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7137A71D-45D5-49A2-923E-A60C026AD02D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7137A71D-45D5-49A2-923E-A60C026AD02D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7137A71D-45D5-49A2-923E-A60C026AD02D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7137A71D-45D5-49A2-923E-A60C026AD02D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
