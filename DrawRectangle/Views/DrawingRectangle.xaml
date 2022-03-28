@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="DrawRectangle.Views.DrawingRectangle"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DrawRectangle.Views"
+             xmlns:vm="clr-namespace:DrawRectangle.ViewModels" 
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:behavior="clr-namespace:DrawRectangle.Behaviors"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <vm:DrawingRectangleViewModel/>
+    </UserControl.DataContext>
+
+    <StackPanel>
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"
+                    Width="200" Margin="10 10 0 0" TextWrapping="Wrap"
+                    Text="{Binding AxisText.Value}"/>
+        <Canvas Background="NavajoWhite"
+                Width="{Binding CanvasWidth.Value}"
+                Height="{Binding CanvasHeight.Value}">
+            <i:Interaction.Behaviors>
+                <behavior:MouseButtonBehavior 
+                    MouseLeftButtonClicked="{Binding OnMouseLeftButtonDown}"
+                    MouseDrag="{Binding OnMouseDrag}"
+                    MouseLeftButtonUp="{Binding OnMouseLeftButtonUp}"
+                    />
+            </i:Interaction.Behaviors>
+            <Rectangle Canvas.Left="{Binding StartX.Value}" 
+                       Canvas.Top="{Binding StartY.Value}"
+                       Width="{Binding Width.Value}" 
+                       Height="{Binding Height.Value}"
+                    Fill="Orange"
+                   />
+        </Canvas>
+    </StackPanel>
+</UserControl>
