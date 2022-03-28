@@ -6,7 +6,7 @@
         xmlns:view="clr-namespace:DrawRectangle.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <StackPanel>
         <!--<TextBlock Name="text1" 
                    HorizontalAlignment="Left" 
                    Margin="10,10,0,0" 
@@ -23,5 +23,6 @@
                 Margin="0,37,0,0"/>-->
 
         <view:CanvasDrawing/>
-    </Grid>
+        <view:DrawingRectangle/>
+    </StackPanel>
 </Window>
