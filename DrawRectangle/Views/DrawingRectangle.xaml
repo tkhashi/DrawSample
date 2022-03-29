@@ -17,7 +17,7 @@
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"
                     Width="200" Margin="10 10 0 0" TextWrapping="Wrap"
                     Text="{Binding AxisText.Value}"/>
-        <Canvas Background="NavajoWhite"
+        <Canvas Background="NavajoWhite" ClipToBounds="True"
                 Width="{Binding CanvasWidth.Value}"
                 Height="{Binding CanvasHeight.Value}">
             <i:Interaction.Behaviors>
